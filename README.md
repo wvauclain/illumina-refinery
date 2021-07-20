@@ -23,7 +23,7 @@ For each Illumina platform we are interested in, we do the following:
 - Filter the data frame so that the remaining columns are all probe IDs which appear more than once
 - Output the data frame as a TSV file for each platform
 
-## 01 Scraping Brainarray
+### 01 Scraping Brainarray
 
 This section of the workflow counts the number of times each gene ID appears among all the brainarray packages for a given species, and outputs this count as a TSV file for the three species with Illumina platforms we are interested in.
 
