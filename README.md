@@ -30,3 +30,9 @@ This section of the workflow counts the number of times each gene ID appears amo
 ### 02 Selecting Gene IDs
 
 This step reads in the outputs from the previous steps and applies the prioritization from above to determine how to map each probe ID. The output is given as a TSV file for each platform so that we can use the results on refine.bio.
+
+## Running the workflow
+
+To run the full workflow, if you have Docker and make installed you can just run `make` or `make all`.
+
+The Makefile is set up to cache the outputs of individual steps of the workflow and to detect changes to the files associated with a particular step. It also understands the dependencies between steps, so if you edit a file in the `00_scraping_illumina` directory it will re-run only steps 00 and 02 of the pipeline.
